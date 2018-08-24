@@ -10,6 +10,9 @@ FROM openjdk:alpine
 COPY --from=mirror /tmp/apache-drill-1.14.0 /opt/drill
 RUN apk add -U --no-cache bash procps
 
+EXPOSE 8047
+EXPOSE 31010
+
 ENTRYPOINT []
 CMD ["sh", "-c", "/opt/drill/bin/drill-embedded"]
 
