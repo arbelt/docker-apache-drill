@@ -1,5 +1,5 @@
 DOCKER_REPO ?= albertw/apache-drill
-DRILL_VERSION ?= 1.14.0
+DRILL_VERSION ?= 1.16.0
 
 .PHONY: build
 build:
