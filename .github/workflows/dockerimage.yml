@@ -10,7 +10,7 @@ jobs:
  
     steps:
     - uses: actions/checkout@v1
-    - env:
-      GH_REPO: ${{github['repository']}}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag docker.pkg.github.com/${GH_REPO}:$(date +%s)
+      env:
+        GH_REPO: ${{github['repository']}}
